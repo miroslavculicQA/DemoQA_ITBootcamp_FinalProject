@@ -16,9 +16,9 @@ public class SidebarPage extends BaseTest {
     @FindBy(className = "text")
     public List<WebElement> elementsMenuItems;
 
-
     // -----------------------------
 
+    // Click on an Item from Sidebar
     public void clickOnSideBarItem(String itemName) {
         for (int i = 0; i < elementsMenuItems.size(); i++) {
             if (elementsMenuItems.get(i).getText().equalsIgnoreCase(itemName)) {
