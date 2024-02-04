@@ -29,17 +29,8 @@ public class ButtonsPage extends BaseTest {
     @FindBy(id = "dynamicClickMessage")
     public WebElement dynamicClickMessage;
 
-
-
     // -----------------------
-    public void clickOnDoubleClickMeButton() {
-        Actions action = new Actions(driver);
-        action.doubleClick(doubleClickMeButton).perform();
-    }
-    public void clickOnRightClickMeButton() {
-        Actions action = new Actions(driver);
-        action.contextClick(rightClickMeButton).perform();
-    }
+
     public void clickOnClickMeButton() {
         clickMeButton.click();
     }
