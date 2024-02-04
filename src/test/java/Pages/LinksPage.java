@@ -1,13 +1,9 @@
 package Pages;
 
 import Base.BaseTest;
-import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
-
-import java.util.List;
 
 public class LinksPage extends BaseTest {
     public LinksPage() {
@@ -18,7 +14,7 @@ public class LinksPage extends BaseTest {
     @FindBy(id = "simpleLink")
     public WebElement homeLink;
     @FindBy(id = "dynamicLink")
-    public WebElement homedSrTGLink;
+    public WebElement homeDynamicLink;
 
     // SEND API CALLS
     @FindBy(id = "created")
@@ -46,8 +42,8 @@ public class LinksPage extends BaseTest {
     public void clickOnHomeLink() {
         homeLink.click();
     }
-    public void clickOnHomedSrTGLink() {
-        homedSrTGLink.click();
+    public void clickOnHomeDynamicLink() {
+        homeDynamicLink.click();
     }
 
     // -----------------------
