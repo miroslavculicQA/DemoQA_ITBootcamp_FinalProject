@@ -1,192 +1,145 @@
 package Tests;
 
 import Base.BaseTest;
-import Pages.ButtonsPage;
 import Pages.HomePage;
 import Pages.LinksPage;
 import Pages.SidebarPage;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.time.Duration;
+import java.util.ArrayList;
 
 import static org.testng.Assert.assertTrue;
 
 public class LinksTests extends BaseTest {
     @BeforeMethod
     public void pageSetUp() {
-
-        driver.get("https://demoqa.com/elements");
-
         homePage = new HomePage();
         sidebarPage = new SidebarPage();
         linksPage = new LinksPage();
-        clickOnLinksElement();
 
+        homePage.clickOnCard("Elements");
+        clickOn_Elements_Links();       // Clicks on an item from Elements menu in sidebar
     }
 
-//    @Test
-//    public void homeLinkWillOpenInANewTab() {
-//        linksPage.clickOnHomeLink();
-//        // TODO ASSERT
-//    }
-//    public void homedSrTGLinkwillOpenInANewTab() {
-//        linksPage.clickOnHomedSrTGLink();
-//        // TODO ASSERT
-//    }
-
-    // ------------------------------\
-
-    @Test
-    public void verifyThatCliCkOn_Created_Link_getsCorrespondingResponse() {
+    // TODO     Kod testova pronaći način da umesto Thread.sleep sačekam lokator koji se menja nakon klika na link
+    @Test(priority = 10)
+    public void clickOn_Home_Link_willOpenInANewTab() {
+        linksPage.clickOnHomeLink();
+        ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
+        driver.switchTo().window(tabs.get(1));
+        Assert.assertEquals(driver.getCurrentUrl(), "https://demoqa.com/");
+        driver.close();
+        driver.switchTo().window(tabs.getFirst());
+    }
+    @Test(priority = 20)
+    public void clickOn_Home_Dynamic_Link_willOpenInANewTab() {
+        linksPage.clickOnHomeDynamicLink();
+        ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
+        driver.switchTo().window(tabs.get(1));
+        Assert.assertEquals(driver.getCurrentUrl(), "https://demoqa.com/");
+        driver.close();
+        driver.switchTo().window(tabs.getFirst());
+    }
+    @Test(priority = 30)
+    public void cliCkOn_Created_Link_getsCorrespondingResponse() throws InterruptedException {
         String actualResponse;
         String createdLinkResponse = excelReader.getStringData("LinksAndResponses", 1, 1);
 
         linksPage.clickOnCreatedLink();
+        Thread.sleep(500);
         actualResponse = linksPage.getLinkResponseText();
 
         Assert.assertTrue(linksPage.linkResponse.isDisplayed());
         Assert.assertEquals(actualResponse, createdLinkResponse);
     }
 
-    @Test
-    public void verifyThatCliCkOn_No_Content_Link_getsCorrespondingResponse() {
+    @Test(priority = 40)
+    public void cliCkOn_No_Content_Link_getsCorrespondingResponse() throws InterruptedException {
         String actualResponse;
         String createdLinkResponse = excelReader.getStringData("LinksAndResponses", 2, 1);
 
         linksPage.clickOnNoContentLink();
+        Thread.sleep(500);
         actualResponse = linksPage.getLinkResponseText();
 
         Assert.assertTrue(linksPage.linkResponse.isDisplayed());
         Assert.assertEquals(actualResponse, createdLinkResponse);
     }
 
-    @Test
-    public void verifyThatCliCkOn_Moved_Link_getsCorrespondingResponse() {
+    @Test(priority = 50)
+    public void cliCkOn_Moved_Link_getsCorrespondingResponse() throws InterruptedException {
         String actualResponse;
         String createdLinkResponse = excelReader.getStringData("LinksAndResponses", 3, 1);
 
         linksPage.clickOnMovedLink();
+        Thread.sleep(500);
         actualResponse = linksPage.getLinkResponseText();
 
         Assert.assertTrue(linksPage.linkResponse.isDisplayed());
         Assert.assertEquals(actualResponse, createdLinkResponse);
     }
 
-    @Test
-    public void verifyThatCliCkOn_Bad_Request_Link_getsCorrespondingResponse() {
+    @Test(priority = 60)
+    public void cliCkOn_Bad_Request_Link_getsCorrespondingResponse() throws InterruptedException {
         String actualResponse;
         String createdLinkResponse = excelReader.getStringData("LinksAndResponses", 4, 1);
 
         linksPage.clickOnBadRequestLink();
+        Thread.sleep(500);
         actualResponse = linksPage.getLinkResponseText();
 
         Assert.assertTrue(linksPage.linkResponse.isDisplayed());
         Assert.assertEquals(actualResponse, createdLinkResponse);
     }
 
-    @Test
-    public void verifyThatCliCkOn_Unauthorized_Link_getsCorrespondingResponse() {
+    @Test(priority = 70)
+    public void cliCkOn_Unauthorized_Link_getsCorrespondingResponse() throws InterruptedException {
         String actualResponse;
         String createdLinkResponse = excelReader.getStringData("LinksAndResponses", 5, 1);
 
         linksPage.clickOnUnauthorizedLink();
+        Thread.sleep(500);
         actualResponse = linksPage.getLinkResponseText();
 
         Assert.assertTrue(linksPage.linkResponse.isDisplayed());
         Assert.assertEquals(actualResponse, createdLinkResponse);
     }
 
-    @Test
-    public void verifyThatCliCkOn_Forbidden_Link_getsCorrespondingResponse() {
+    @Test(priority = 80)
+    public void cliCkOn_Forbidden_Link_getsCorrespondingResponse() throws InterruptedException {
         String actualResponse;
         String createdLinkResponse = excelReader.getStringData("LinksAndResponses", 6, 1);
 
         linksPage.clickOnForbiddenLink();
+        Thread.sleep(500);
         actualResponse = linksPage.getLinkResponseText();
 
         Assert.assertTrue(linksPage.linkResponse.isDisplayed());
         Assert.assertEquals(actualResponse, createdLinkResponse);
     }
 
-    @Test
-    public void verifyThatCliCkOn_Not_Found_Link_getsCorrespondingResponse() {
+    @Test(priority = 90)
+    public void cliCkOn_Not_Found_Link_getsCorrespondingResponse() throws InterruptedException {
         String actualResponse;
         String createdLinkResponse = excelReader.getStringData("LinksAndResponses", 7, 1);
 
         linksPage.clickOnNotFoundLink();
+        Thread.sleep(500);
         actualResponse = linksPage.getLinkResponseText();
 
         Assert.assertTrue(linksPage.linkResponse.isDisplayed());
         Assert.assertEquals(actualResponse, createdLinkResponse);
     }
 
-
-//    @Test
-//    public void everyAPIcallLinkSendsCorrectResponse() throws InterruptedException {
-//        String actualResponse;
-//        String createdLinkResponse = excelReader.getStringData("LinksAndResponses", 1, 1);
-//        String noContentResponse = excelReader.getStringData("LinksAndResponses", 2, 1);
-//        String movedResponse = excelReader.getStringData("LinksAndResponses", 3, 1);
-//        String badRequestResponse = excelReader.getStringData("LinksAndResponses", 4, 1);
-//        String UnauthorizedResponse = excelReader.getStringData("LinksAndResponses", 5, 1);
-//        String forbiddenResponse = excelReader.getStringData("LinksAndResponses", 6, 1);
-//        String notFoundResponse = excelReader.getStringData("LinksAndResponses", 7, 1);
-//
-//        linksPage.clickOnCreatedLink();
-//        Thread.sleep(1000);
-//        actualResponse = linksPage.getLinkResponseText();
-//        Assert.assertEquals(actualResponse,createdLinkResponse);
-//
-//        linksPage.clickOnNoContentLink();
-//        Thread.sleep(1000);
-//        actualResponse = linksPage.getLinkResponseText();
-//        Assert.assertEquals(actualResponse,noContentResponse);
-//
-//        linksPage.clickOnMovedLink();
-//        Thread.sleep(1000);
-//        actualResponse = linksPage.getLinkResponseText();
-//        Assert.assertEquals(actualResponse,movedResponse);
-//
-//        linksPage.clickOnBadRequestLink();
-//        Thread.sleep(1000);
-//        actualResponse = linksPage.getLinkResponseText();
-//        Assert.assertEquals(actualResponse,badRequestResponse);
-//
-//        linksPage.clickOnUnauthorizedLink();
-//        Thread.sleep(1000);
-//        actualResponse = linksPage.getLinkResponseText();
-//        Assert.assertEquals(actualResponse,UnauthorizedResponse);
-//
-//        linksPage.clickOnForbiddenLink();
-//        Thread.sleep(1000);
-//        actualResponse = linksPage.getLinkResponseText();
-//        Assert.assertEquals(actualResponse,forbiddenResponse);
-//
-//        linksPage.clickOnNotFoundLink();
-//        Thread.sleep(1000);
-//        actualResponse = linksPage.getLinkResponseText();
-//        Assert.assertEquals(actualResponse,notFoundResponse);
-//
-//        Assert.assertTrue(linksPage.linkResponse.isDisplayed());
-//
-//
-//        }
-
-
-
-
-
-//        linksPage.clickOnCreatedLink();
-//        Assert.assertTrue(linksPage.linkResponse.isDisplayed());
-//        Assert.assertEquals(linksPage.getLinkResponseText(), "Link has responded with staus 201 and status text Created");
-//        linksPage.getLinkResponseText();
-        // TODO INSERT DATA WITH EXEL READER
+    @AfterMethod
+    public void tearDown() {
+        driver.quit();
     }
+
+}
 
 
 
