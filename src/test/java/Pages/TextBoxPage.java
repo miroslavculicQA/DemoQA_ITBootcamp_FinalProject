@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class TextBoxPage extends BaseTest {
 
     public TextBoxPage() {
@@ -22,8 +24,8 @@ public class TextBoxPage extends BaseTest {
     public WebElement permanentAddressField;
     @FindBy(id = "submit")
     public WebElement submitButton;
-    @FindBy(id = "output")
-    public WebElement textBoxOutput;
+    @FindBy(className = "mb-1")
+    public List<WebElement> output;
 
 
 
