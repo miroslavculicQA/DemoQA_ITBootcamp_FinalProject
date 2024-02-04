@@ -4,20 +4,44 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d7ec63e-4ae1-4fc3-bcc6-92d7845a2737" name="Changes" comment="">
+    <list default="true" id="6d7ec63e-4ae1-4fc3-bcc6-92d7845a2737" name="Changes" comment="Deleted unused tests">
+      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/DynamicPropertiesPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Tests/DynamicPropertiesTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestData.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/TestData.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Base/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/ButtonsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/ButtonsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/LinksPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/LinksPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/RadioButtonPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/RadioButtonPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/SidebarPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/SidebarPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/TextBoxPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/TextBoxPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/ButtonsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/ButtonsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/RadioButtonTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/RadioButtonTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/TextBoxTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/TextBoxTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2bmhnpQCmCPJqQPjwVbpG0bNzPH" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -26,12 +50,140 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Maven.DemoQA_ITBootcamp_FinalProject [-v].executor": "Run",
+    "Maven.DemoQA_ITBootcamp_FinalProject [test].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true"
+    "TestNG.ButtonsTest.executor": "Run",
+    "TestNG.ButtonsTest.userCanClickOnAllButtons.executor": "Run",
+    "TestNG.DynamicPropertiesTests.buttonIsEnabledAfter5Seconds.executor": "Run",
+    "TestNG.DynamicPropertiesTests.buttonIsVisibleAfter5Seconds.executor": "Run",
+    "TestNG.DynamicPropertiesTests.executor": "Run",
+    "TestNG.LinksTests.executor": "Run",
+    "TestNG.LinksTests.verifyThatCliCkOn_Forbidden_Link_getsCorrespondingResponse.executor": "Run",
+    "TestNG.LinksTests.verifyThatCliCkOn_No_Content_Link_getsCorrespondingResponse.executor": "Run",
+    "TestNG.LinksTests.verifyThatCliCkOn_Not_Found_Link_getsCorrespondingResponse.executor": "Run",
+    "TestNG.LinksTests.verifyThatClickOn_Home_Dynamic_Link_willOpenInANewTab.executor": "Run",
+    "TestNG.LinksTests.verifyThatClickOn_Home_Link_willOpenInANewTab.executor": "Run",
+    "TestNG.RadioButtonTests.executor": "Run",
+    "TestNG.RadioButtonTests.userCanClickOnYesRadioButton.executor": "Run",
+    "TestNG.RadioButtonTests.userCanClickOn_ImpressiveRadioButton.executor": "Run",
+    "TestNG.RadioButtonTests.userCanNOTClickOn_NoRadioButton.executor": "Run",
+    "TestNG.TextBoxTests.executor": "Run",
+    "TestNG.TextBoxTests.userCanFillTextBoxes_AndSubmitFormWithValidData.executor": "Run",
+    "TestNG.TextBoxTests.userCanSubmitFormWithValidData.executor": "Run",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/QA/Automation testing/DemoQA_ITBootcamp_FinalProject"
   }
 }]]></component>
+  <component name="RunManager" selected="TestNG.DynamicPropertiesTests.buttonIsVisibleAfter5Seconds">
+    <configuration name="DynamicPropertiesTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="DemoQA_ITBootcamp_FinalProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.DynamicPropertiesTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DynamicPropertiesTests.buttonIsEnabledAfter5Seconds" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="DemoQA_ITBootcamp_FinalProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.DynamicPropertiesTests" />
+      <option name="METHOD_NAME" value="buttonIsEnabledAfter5Seconds" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DynamicPropertiesTests.buttonIsVisibleAfter5Seconds" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="DemoQA_ITBootcamp_FinalProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.DynamicPropertiesTests" />
+      <option name="METHOD_NAME" value="buttonIsVisibleAfter5Seconds" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TextBoxTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="DemoQA_ITBootcamp_FinalProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.TextBoxTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TextBoxTests.userCanFillTextBoxes_AndSubmitFormWithValidData" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="DemoQA_ITBootcamp_FinalProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.TextBoxTests" />
+      <option name="METHOD_NAME" value="userCanFillTextBoxes_AndSubmitFormWithValidData" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.DynamicPropertiesTests.buttonIsVisibleAfter5Seconds" />
+        <item itemvalue="TestNG.DynamicPropertiesTests.buttonIsEnabledAfter5Seconds" />
+        <item itemvalue="TestNG.DynamicPropertiesTests" />
+        <item itemvalue="TestNG.TextBoxTests" />
+        <item itemvalue="TestNG.TextBoxTests.userCanFillTextBoxes_AndSubmitFormWithValidData" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.1-openjdk-21.0.1-249ae16d76d6-a618e4d4" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -41,6 +193,39 @@
       <option name="presentableId" value="Default" />
       <updated>1706826332791</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added Readme file">
+      <option name="closed" value="true" />
+      <created>1707064810263</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1707064810263</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Deleted unused tests">
+      <option name="closed" value="true" />
+      <created>1707070463680</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1707070463680</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added Readme file" />
+    <MESSAGE value="Deleted unused tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deleted unused tests" />
   </component>
 </project>
