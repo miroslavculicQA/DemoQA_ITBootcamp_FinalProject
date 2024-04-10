@@ -10,7 +10,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
 import java.io.IOException;
 import java.time.Duration;
@@ -33,7 +34,7 @@ public class BaseTest {
     public DynamicPropertiesPage dynamicPropertiesPage;
 
 
-    @BeforeClass
+    @BeforeMethod
     public void setUp() throws IOException {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
@@ -46,7 +47,7 @@ public class BaseTest {
         driver.get("https://demoqa.com/");
     }
 
-
+    // Elements items
     public void clickOn_Elements_Buttons() {
         sidebarPage.clickOnSideBarItem("Buttons");
     }
@@ -117,6 +118,13 @@ public class BaseTest {
             System.out.println(e);
         }
         return isDisplayed;
+    }
+
+
+// Close web-driver
+    @AfterMethod
+    public void tearDown() {
+        driver.quit();
     }
 
 }
