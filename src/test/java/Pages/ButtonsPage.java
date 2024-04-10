@@ -29,11 +29,34 @@ public class ButtonsPage extends BaseTest {
     @FindBy(id = "dynamicClickMessage")
     public WebElement dynamicClickMessage;
 
-    // -----------------------
+    // --------------------------------------
+
+    // Expected message text for Buttons Page
+    public String doubleClickMessageExpectedText = "You have done a double click";
+    public String rightClickMessageExpectedText = "You have done a right click";
+    public String clickMessageExpectedText = "You have done a dynamic click";
+
+
+    // Get displayed text after click
+    public String doubleClickMessageText() {
+        return doubleClickMessage.getText();
+    }
+    public String rightClickMessageText() {
+        return rightClickMessge.getText();
+    }
+    public String clickMessageText() {
+        return dynamicClickMessage.getText();
+    }
+
 
     public void clickOnClickMeButton() {
         clickMeButton.click();
     }
+
+
+
+
+
 
 
 
